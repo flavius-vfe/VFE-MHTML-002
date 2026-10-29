@@ -1,0 +1,3 @@
+# Privacy policy
+
+VFE MHTML 002 has no accounts, network analytics, trackers, telemetry or advertising. The extension processes the active webpage locally after the user clicks Save. It fetches some page-linked resources from their original web servers as part of constructing the archive; those requests may have normal server logging or cookies. It saves the resulting archive to a user-selected location using the browser downloads API. The project does not send page content to any developer-owned server. The extension requests only `activeTab` and `downloads` permissions. Saved archives can contain personal or sensitive page content; handle accordingly.
