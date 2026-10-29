@@ -2,6 +2,10 @@
 
 A small Firefox extension that saves the active tab as one complete MHTML (.mhtml) file.
 
+<p align="center">
+  <img src="images/menu_extension.png" width="45%" />
+</p>
+
 ## Download and install (unsigned)
 
 1. Use **Firefox Developer Edition**, Nightly, or a compatible ESR build. Tested target: Firefox Developer Edition 160.0b1 (64-bit); runtime testing is still required.
