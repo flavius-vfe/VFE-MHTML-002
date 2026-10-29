@@ -1,13 +1,13 @@
 # VFE MHTML 002
 
-Firefox Developer Edition adaptation of [VFE MHTML 001](https://github.com/flavius-vfe/VFE-MHTML-001). **Release 002 · Build 1 · version 1.0.0.**
+A small Firefox extension that saves the active tab as one complete MHTML (.mhtml) file.
 
 ## Download and install (unsigned)
 
 1. Use **Firefox Developer Edition**, Nightly, or a compatible ESR build. Tested target: Firefox Developer Edition 160.0b1 (64-bit); runtime testing is still required.
 2. Open `about:config` and set `xpinstall.signatures.required` to `false`.
 3. Open `about:addons` → gear icon → **Install Add-on From File**.
-4. Select `VFE-MHTML-002-v1.0.0-unsigned.xpi` from Releases.
+4. Select `VFE-MHTML-002-Firefox.xpi` from Releases.
 5. Open an ordinary HTTP(S) page, click the add-on icon, then **Save page as MHTML**. Select a destination in the Save As dialog.
 
 For temporary development use `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on** → select `manifest.json`.
@@ -19,10 +19,6 @@ For temporary development use `about:debugging#/runtime/this-firefox` → **Load
 - Fetches accessible images, stylesheets, fonts and other linked resources up to **250 resources / 40 MiB** and emits a MIME multipart/related `.mhtml` archive.
 - Safe title + UTC timestamp filenames and Save As dialog; local-only processing, no telemetry, remote scripts or third-party dependencies.
 - Uses the exact VFE 001 **color palette** and a closely matched replacement icon. Original PNG assets were not available to copy when this build was prepared.
-
-## Important compatibility limitations
-
-Firefox does **not** expose Chrome's `pageCapture.saveAsMHTML()` WebExtensions API. This add-on implements a best-effort serializer, not Chrome's identical capture behavior. Cross-origin resources without CORS permission, iframes, shadow DOM, background requests, dynamic applications, video/audio streams, and protected browser pages may be absent or incomplete. Some websites may block resource downloads. Page archive content includes the page's visible/private information; inspect files before sharing.
 
 Firefox itself may not open `.mhtml` natively. Open with a compatible MHTML reader (often Chromium-based browsers). No guarantee of pixel-perfect offline fidelity.
 
